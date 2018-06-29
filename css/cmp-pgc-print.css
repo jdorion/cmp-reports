@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    #PRINT ONLY
+\*------------------------------------*/
+
+@media print {
+
+    body {
+        font-size: 95%;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+
+    h1[class^="hd"] {
+        padding-left: 0;
+    }
+
+    table.rpt-supervisorSummary {
+        width: 100%;
+    }
+
+    table.rpt-supervisorSummary a[href]:after, #wb-sttl a[href]:after {
+        content: none;
+    }
+
+    table.rpt-supervisorySummary tr.borderHead {
+        border-top: 2px solid #AAA;
+        border-bottom: 2px solid #AAA;
+    }
+
+    #wb-bc,
+    #cn-data-policy,
+    #wb-acct,
+    #wb-dtmd {
+        display: none;
+    }
+
+    #wb-sttl {
+        font-size: 28px;
+    }
+
+    .floatThead-container {
+        position: absolute !important;
+        left: auto !important;
+        top: 210px !important;
+    }
+
+    .table-responsive {
+        overflow: visible;
+    }
+}

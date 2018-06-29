@@ -1,13 +1,627 @@
-<html>
+<!DOCTYPE html>
 
-<body>
-    <div id="react-app"> </div>
-    <script src="./src/index.js"></script>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<script>
+    function MM_goToURL() { //v3.0
+        var i, args = MM_goToURL.arguments;
+        document.MM_returnValue = false;
+        for (i = 0; i < (args.length - 1); i += 2) eval(args[i] + ".location='" + args[i + 1] + "'");
+    }
+</script>
+<!-- InstanceBegin template="/Templates/CMP - 1 Column.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
 
-    <script> 
-        var translations = { text: 'It works !!' } ;
-        window.MyApp("#react-app"); 
+<head>
+    <meta charset="utf-8" />
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Collection Management Portal</title>
+    <!-- InstanceEndEditable -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="" />
+    <meta name="dcterms.title" content="" />
+    <meta name="dcterms.creator" content="" />
+    <meta name="dcterms.issued" title="W3CDTF" content="" />
+    <meta name="dcterms.modified" title="W3CDTF" content="" />
+    <meta name="dcterms.subject" title="scheme" content="" />
+    <meta name="dcterms.language" title="ISO639-2" content="eng" />
+
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/theme.min.css" />
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/plugins.css" />
+    <link rel="stylesheet" href="./css/wizard.css" />
+    <link rel="stylesheet" href="./css/cmp-pgc.css" />
+    <link rel="stylesheet" href="./css/cmp-pgc-responsive.css" />
+    <link rel="stylesheet" href="./css/cmp-pgc-print.css" />
+    <link rel="stylesheet" href="./css/prototype.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+
+    <!--[if lt IE 9]>
+    <link href="../assets/favicon.ico" rel="shortcut icon"/>
+    <link rel="stylesheet" href="../css/ie8-theme.min.css"/>
+    <script src="../js/jquery/1.11.1/jquery.min"></script>
+    <script src="../js/ie8-wet-boew.min.js"></script>
+    <![endif]-->
+
+    <noscript>
+        <link rel="stylesheet" href="./css/noscript.min.css" />
+    </noscript>
+
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="./js/jquery/2.1.4/jquery.js"></script>
+    <!--<![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="../js/ie8-wet-boew2.min.js"></script>
+    <![endif]-->
+
+    <!-- InstanceBeginEditable name="Head-JS" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- InstanceEndEditable -->
+
+    <!-- CustomScriptsCSSStart -->
+
+    <link href="./css/themes/statcan/jquery-ui.css" rel="stylesheet" />
+    <link href="./css/cmp-pgc.css" rel="stylesheet" />
+    <!-- InstanceBeginEditable name="Head-CSS" -->
+    <!-- to be added into main css -->
+
+    <!-- end tab css (to be added to main css) -->
+
+    <!-- InstanceEndEditable -->
+    <!-- InstanceParam name="IsFieldStaff" type="boolean" value="false" -->
+    <!-- InstanceParam name="IsSeniorFieldStaff" type="boolean" value="false" -->
+    <!-- InstanceParam name="IsTelephoneOperator" type="boolean" value="false" -->
+    <!-- InstanceParam name="IsSeniorTelephoneOperator" type="boolean" value="false" -->
+    <!-- InstanceParam name="IsCollectionManager" type="boolean" value="true" -->
+    <!-- InstanceParam name="IsProgramManager" type="boolean" value="false" -->
+    <!-- InstanceParam name="IsSurveyOfficer" type="boolean" value="false" -->
+    <!-- InstanceParam name="IsCollectionClient" type="boolean" value="false" -->
+    <!-- InstanceParam name="IsOfficeStaff" type="boolean" value="false" -->
+
+    <!-- CustomScriptsCSSEnd -->
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+    <ul id="wb-tphp">
+        <li class="wb-slc">
+            <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+        </li>
+        <li class="wb-slc visible-sm visible-md visible-lg">
+            <a class="wb-sl" href="#wb-info">Skip to "About this site"</a>
+        </li>
+    </ul>
+    <header role="banner">
+        <div id="wb-bnr">
+            <div id="wb-bar">
+                <div class="container">
+                    <div class="row">
+                        <object id="gcwu-sig" type="image/svg+xml" tabindex="-1" role="img" data="./assets/sig-en.svg" aria-label="Government of Canada">
+                        </object>
+                        <ul id="gc-bar" class="list-inline">
+                            <li>
+                                <a href="http://www.canada.ca/en/index.html" rel="external">Canada.ca</a>
+                            </li>
+                            <li>
+                                <a href="http://www.canada.ca/en/services/index.html" rel="external">Services</a>
+                            </li>
+                            <li>
+                                <a href="http://www.canada.ca/en/gov/dept/index.html" rel="external">Departments</a>
+                            </li>
+                            <li id="wb-lng">
+                                <h2>Language selection</h2>
+                                <ul class="list-inline">
+                                    <li>
+                                        <a lang="fr" href="#">Français</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
+                            <h2>Search and menus</h2>
+                            <ul class="pnl-btn list-inline text-right">
+                                <li>
+                                    <a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button">
+                                        <span class="glyphicon glyphicon-search">
+                                            <span class="glyphicon glyphicon-th-list">
+                                                <span class="wb-inv">Search and menus</span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="mb-pnl"></div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="wb-sttl" class="col-md-5">
+                        <a href="#">
+                            <span>Collection Management Portal</span>
+                        </a>
+                    </div>
+                    <object id="wmms" type="image/svg+xml" tabindex="-1" role="img" data="./assets/wmms.svg" aria-label="Symbol of the Government of Canada">
+                    </object>
+                </div>
+            </div>
+        </div>
+        <nav role="navigation" id="wb-sm" data-ajax-fetch="./includes/menu-collectionManager.txt" data-trgt="mb-pnl"
+            class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+            <div class="container nvbar">
+                <h2>Topics menu</h2>
+                <div class="row">
+                    <ul class="list-inline menu">
+                        <li>
+                            <a href="#">Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#">Surveys</a>
+                        </li>
+                        <li>
+                            <a href="#">Cases</a>
+                        </li>
+                        <li>
+                            <a href="#">Reports</a>
+                        </li>
+                        <li>
+                            <a href="#">Administration</a>
+                        </li>
+                        <li>
+                            <a href="#">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="#">Tools</a>
+                        </li>
+                        <li>
+                            <a href="#">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav role="navigation" id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row bg-bc">
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <!-- InstanceBeginEditable name="Breadcrumb" -->
+
+                            <!-- InstanceEndEditable -->
+                        </ol>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                        <div id="wb-acct">
+                            <aside>
+                                <h2 class="wb-invisible">Access to account profile and logout</h2>
+                                <ul class="list-inline list-bullet-none">
+                                    <li>
+                                        <i class="fa fa-user fa-fw"></i>
+                                        <a href="#">Test User</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-sign-out fa-fw"></i>
+                                        <a href="#">Logout</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- HeaderEnd -->
+    </header>
+    <main role="main" property="mainContentOfPage" class="container">
+        <!-- MainContentStart -->
+        <!-- InstanceBeginEditable name="Content" -->
+
+        <!--    **************************************************************************
+                ********************     START OF MAIN CONTENT     *******************
+                ********************************************************************** -->
+
+
+        <!--    **********************************************************************
+                ********************     START OF REACT CONTENT    *******************
+                ********************************************************************** -->
+
+                <div id="react-app"> </div>
+                <script src="./src/index.js"></script>
+            
+                <script> 
+                    var translations = { text1: 'It works !!' } ;
+                    window.MyApp("#react-app"); 
+                </script>
+
+        <!--    *********************************************************************
+                ********************     END OF REACT CONTENT     *******************
+                ********************************************************************* -->
+
+        <!-- InstanceEndEditable -->
+        <dl id="wb-dtmd">
+            <dt>Version:</dt>
+            <dd>{#}</dd>
+            <!-- Build information : , built from SVN revision  on   -->
+        </dl>
+    </main>
+    <footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+        <div class="container">
+            <nav role="navigation">
+                <h2>About this site</h2>
+                <ul id="gc-tctr" class="list-inline">
+                    <li>
+                        <a rel="license" href="#l">Terms and conditions</a>
+                    </li>
+                    <li>
+                        <a href="#">Transparency</a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <section class="col-sm-3">
+                        <h3>Contact us</h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="col-sm-3">
+                        <h3>About</h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">About the Collection Management Portal</a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </nav>
+        </div>
+        <div id="gc-info">
+            <div class="container">
+                <nav role="navigation">
+                    <h2>Government of Canada footer</h2>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="http://healthycanadians.gc.ca">
+                                <span>Health</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://travel.gc.ca">
+                                <span>Travel</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.servicecanada.gc.ca/eng/home.shtml">
+                                <span>Service Canada</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.jobbank.gc.ca">
+                                <span>Jobs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.budget.gc.ca">
+                                <span>Economy</span>
+                            </a>
+                        </li>
+                        <li id="canada-ca">
+                            <a href="http://www.canada.ca/en/index.html">Canada.ca</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="./js/jquery/2.1.4/jquery.js"></script>
+    <script src="./js/wet-boew.min.js"></script>
+    <script src="./js/jquery-ui/1.9.2/jquery-ui.min.js"></script>
+    <script src="./js/statcan/jquery.maskedinput/jquery.maskedinput.js"></script>
+    <!--<![endif]-->
+    <!-- InstanceBeginEditable name="Footer-JS" -->
+
+    <!-- tabs js -->
+    <script type="application/javascript">
+        $(document).on("wb-ready.wb", function () {
+
+            //back to top link closes all accordions
+            $("#backToTop").on("click", function () {
+                $(".acc-group").prop("open", false);
+            });
+
+            //****************** DATE PICKER *****************************
+            $("#startdate, #enddate").datepicker({
+                defaultDate: "-1d",
+                maxDate: "-1d",
+                dateFormat: "yy-mm-dd",
+                constrainInput: true,
+                changeMonth: false,
+                changeYear: false,
+                showOn: "both",
+                buttonImage: "./images/icon_calendar.gif",
+                buttonImageOnly: true,
+                showButtonPanel: true
+            }).mask("9999-99-99");
+
+            /*****************************************************************
+             *                          FILTERS
+             *****************************************************************/
+            //If the checkbox is de-selected, the survey selector will enable.
+            //Selecting the Display all surveys checkbox will clear and disable the Survey and Cycle selectors.
+            $("#all-surveys").on("change", function () {
+                if (this.checked) {
+                    disableCycle();
+                    disableSurvey();
+                } else {
+                    enableSurvey();
+                }
+                toggleGenerateButton();
+            });
+
+            //Once a survey is selected, the cycle selector will enable.
+            $("#survey").on("change", function () {
+                if ($(this).val() != "select") {
+                    $("#cycle").prop("disabled", false);
+                } else {
+                    disableCycle();
+                }
+                toggleGenerateButton();
+            });
+
+            //Changing the date range will clear the Survey and Cycle selectors, and reselect the "Display all' checkbox.
+            $("#startdate, #enddate").on("change", function () {
+                disableCycle();
+                disableSurvey();
+                $("#all-surveys").prop("checked", true);
+                toggleGenerateButton();
+            });
+
+            //Once the required information is provided the generate report button will be enabled.
+            $("#startdate").on("change", function () {
+                var minDate = $(this).datepicker("getDate");
+                var maxDate = new Date();
+                maxDate.setDate(minDate.getDate() + 4);
+
+                $("#enddate").datepicker("option", "minDate", minDate);
+                $("#enddate").datepicker("option", "maxDate", maxDate);
+
+                toggleGenerateButton();
+            });
+
+            toggleGenerateButton();
+
+            //******************** VIEW CASE WORK DETAILS *******************
+            //make table paginated
+            $(".view-details").dataTable({
+                "ordering": false,
+                "info": false,
+                "searching": false
+            });
+
+            //view off system time checkbox
+            $(".show-off-sys").on("change", function () {
+                var table = $(this).closest(".view-details");
+                if (this.checked) {
+                    table.find(".bg-off-sys").closest("tr").show();
+                    table.on("draw.dt", function () {
+                        table.find(".bg-off-sys").closest("tr").show();
+                    });
+                } else {
+                    table.find(".bg-off-sys").closest("tr").hide();
+                    table.on("draw.dt", function () {
+                        table.find(".bg-off-sys").closest("tr").hide();
+                    });
+                }
+            });
+
+            /******************************************************************
+             *                          BAR GRAPH
+             ******************************************************************/
+            //***************** HOVER TOOLTIP ********************
+            //********************* TOOLTIP *****************************
+
+            $(".zoom").hover(function (e) {
+                // display different text depending on type - prototype purposes only
+                if ($(this).hasClass("bg-res") || $(this).hasClass("bg-res-2")) {
+                    var html = "<strong>Survey</strong><br>Rabbit Care<br><strong>PE code</strong><br>1234<br><strong>Outcome</strong><br>400 - Complete<br><strong>Total system time</strong><br>00:08:00";
+                } else if ($(this).hasClass("bg-ref") || $(this).hasClass("bg-ref-2")) {
+                    var html = "<strong>Survey</strong><br>Rabbit Care<br><strong>PE code</strong><br>1234<br><strong>Outcome</strong><br>503 - First refusal<br><strong>Total system time</strong><br>00:04:00";
+                } else if ($(this).hasClass("bg-nocon") || $(this).hasClass("bg-nocon-2") || $(this).hasClass("bg-nocon-3")) {
+                    var html = "<strong>Survey</strong><br>Rabbit Care<br><strong>PE code</strong><br>1234<br><strong>Outcome</strong><br>105 - Recorded message service<br><strong>Total system time</strong><br>00:00:30";
+                } else if ($(this).hasClass("bg-other") || $(this).hasClass("bg-other-2") || $(this).hasClass("bg-other-3")) {
+                    var html = "<strong>Survey</strong><br>Rabbit Care<br><strong>PE code</strong><br>1234<br><strong>Outcome</strong><br>300 - Out of scope<br><strong>Total system time</strong><br>00:01:15";
+                } else if ($(this).hasClass("bg-off-sys")) {
+                    var html = "<strong>Start time</strong><br>11:30:00<br><strong>End time</strong><br>11:45:00<strong><br>Off system time</strong><br>00:15:00"
+                } else if ($(this).hasClass("bg-other-sur")) {
+                    var html = "<strong>Survey</strong><br>Labour Force Survey<br><strong>PE code</strong><br>5678<br><strong>Outcome</strong><br>400 - Complete<br><strong>Total system time</strong><br>00:01:15";
+                    //CLAIMS
+                } else if ($(this).hasClass("bg-other-claim")) {
+                    var html = "<strong>Survey</strong><br>Labour Force Survey<br><strong>PE code</strong><br>5678<br><strong>Activity</strong><br>9 - Telephone interviewing<br><strong>Duration</strong><br>11:30 - 12:15";
+                } else if ($(this).hasClass("bg-other-task")) {
+                    var html = "<strong>Survey</strong><br>Rabbit Care<br><strong>PE code</strong><br>1234<br><strong>Activity</strong><br>30 - Admin time<br><strong>Duration</strong><br>11:30 - 12:15";
+                } else {
+                    var html = "<strong>Survey</strong><br>Rabbit Care<br><strong>PE code</strong><br>1234<br><strong>Activity</strong><br>9 - Telephone interviewing<br><strong>Duration</strong><br>11:30 - 12:15";
+                }
+                $('<span class="cvc-tooltip"></span>').html(html)
+                    .appendTo("body")
+                    .css('top', (e.pageY - 200) + 'px')
+                    .css('left', (e.pageX + 10) + 'px')
+                    .fadeIn('slow');
+            }, function () {
+                $(".cvc-tooltip").remove();
+            });
+
+            $(".zoom.clickable").bind("click", function () {
+                var details = $(this).closest(".row").siblings("details");
+                details.prop("open", true);
+
+                if ($("#" + $(this).data("row")).is(":visible")) {
+                    location = "#" + $(this).data("row");
+                } else {
+                    //TODO: find correct page and go to it
+                }
+            });
+
+            /******************************************************************
+             *                  INTERVIEWER MODAL - TABLE
+             ******************************************************************/
+
+            //************* SEARCH TABLE ******************
+            $("#mdlTbl-int").dataTable({
+                "ordering": false,
+                "info": false,
+                "lengthChange": false,
+                "language": { search: "" }
+            });
+
+            //************ TABLE FORMATTING *****************
+            var searchFilter = $("#mdlTbl-int_filter");
+            var searchLabel = $("#mdlTbl-int_filter label");
+            var searchInput = $("#mdlTbl-int_filter label input");
+            searchInput.addClass("form-control width98");
+            searchInput.prop("placeholder", "Search")
+            searchFilter.addClass("width100 center-block");
+            searchLabel.addClass("width100");
+
+            /*************************************************************
+             *                  INTERVIEWER MODAL - TAGS
+             *************************************************************/
+            //hide error message
+            $("#limitMsg-int").hide();
+
+            //hides tag and unchecks checkbox when click "x"
+            $("#tags-int").on("click", ".dismissTag", function () {
+                var section = $(this).closest("div").prop("id").split("-")[1]; //determine which section's modal the tag is in
+                var tagID = $(this).parent().prop("id");
+                var chbxID = (tagID.split("_"))[1];
+                $(this).parent().remove();
+                $("#" + chbxID).prop("checked", false);
+                $(".interviewerTable").on("draw.dt", function () {
+                    $("#" + chbxID).prop("checked", false);
+                });
+                toggleViewButton(section);
+            });
+
+            //shows tag when select checkbox, removes tag when deselect checkbox
+            $(".interviewerTable").on("change", ".checkbox input", function () {
+                var section = $(this).closest("table").prop("id").split("-")[1]; //determine which section's modal the checkbox is in
+                var chbxHTML = $(this).siblings("label").text();
+                var chbxID = $(this).prop("id");
+                var tagID = "tag_" + chbxID;
+
+                //limit 5 interviewers and error msg
+                var tagContainer = $("#tags-" + section);
+                if ((tagContainer.children("span").length) > 4) {
+                    if (this.checked) {
+                        this.checked = false;
+                        $("#limitMsg-" + section).show();
+                        return;
+                    }
+                }
+
+                if (this.checked) {
+                    $("#tags-" + section).append(createTag(chbxID, chbxHTML));
+                } else {
+                    $("#" + tagID).remove();
+                }
+                toggleViewButton(section);
+            });
+
+            toggleViewButton("int");
+        });
+
+
+        /********************************************************************
+         *                  INTERVIEWER MODAL - TAGS
+         * @param id    :id of checkbox creating tag element
+         * @param name  :name of interviewer from checkbox
+         * @returns {jQuery}    :html element of tag as jquery object
+         ********************************************************************/
+
+        function createTag(id, name) {
+            var tag = $("<span id=\"tag_" + id + "\" class=\"filterTag mrgn-lft-sm mrgn-tp-sm\"></span>").html(
+                "<span class=\"interviewerName\">" + name + "</span><a class=\"dismissTag btn\"><i class=\"fa fa-times\"></i></a>");
+
+            return tag;
+        };
+
+        function toggleViewButton(section) {
+            var tagContainer = $("#tags-" + section);
+
+            if (tagContainer.children("span").length == 0) {
+                $("#sbmtBtn-" + section).prop("disabled", true);
+            } else {
+                $("#sbmtBtn-" + section).prop("disabled", false);
+            }
+        }
+
+        /*****************************************************************
+         *                       FILTERS
+         ****************************************************************/
+
+        function disableSurvey() {
+            $("#survey").prop("disabled", true);
+            $("#survey").val("select");
+            $("#sur-mandatory").addClass("display-none");
+        }
+
+        function enableSurvey() {
+            $("#survey").prop("disabled", false);
+            $("#sur-mandatory").removeClass("display-none");
+        }
+
+        function disableCycle() {
+            $("#cycle").prop("disabled", true);
+            $("#cycle").val("select");
+        }
+
+        function toggleGenerateButton() {
+            if (surveyEnabled()) {
+                if (($("#startdate").val() != "") && ($("#survey").val() != "select")) {
+                    $("#gen-report").prop("disabled", false);
+                } else {
+                    $("#gen-report").prop("disabled", true);
+                }
+            } else {
+                if (($("#startdate").val() != "")) {
+                    $("#gen-report").prop("disabled", false);
+                } else {
+                    $("#gen-report").prop("disabled", true);
+                }
+            }
+        }
+
+        function surveyEnabled() {
+            if ($("#survey").prop("disabled") == false) {
+                return true;
+            }
+        }
+
     </script>
+
+    <!-- charting js -->
+    <script src="./js/statcan/jquery.flot/jquery.flot.js"></script>
+    <script src="./js/statcan/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="./js/statcan/jquery.flot/jquery.flot.categories.js"></script>
+    <script src="./js/statcan/jquery.flot/jquery.flot.orderBars.js"></script>
+    <script src="./js/statcan/jquery.flot/jquery.flot.axislabels.js"></script>
+    <script src="./js/dataTables/dataTables.css"></script>
+    <script src="./js/dataTables/dataTables.min.js"></script>
+    <!-- InstanceEndEditable -->
 </body>
+<!-- InstanceEnd -->
 
 </html>

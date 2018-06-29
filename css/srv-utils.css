@@ -1,0 +1,50 @@
+
+
+/*------------------------------------*\
+    #Font sizing/style
+\*------------------------------------*/
+
+
+.capitalize:first-letter {
+text-transform: capitalize;
+}
+
+
+/*------------------------------------*\
+    #PRINT ONLY
+\*------------------------------------*/
+
+@media print {
+
+    #gcwu-sig {
+        height: 25px
+    }
+
+    #wmms {
+        height: 25px;
+        position: absolute;
+        right: 20px;
+        top: -30px
+    }
+
+    #wb-bc [href]:after {
+        content: ""
+    }
+
+    h1 {
+        margin-top: 0
+    }
+	
+	pre {
+ 		white-space: pre-wrap;       /* css-3 */
+ 		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ 		white-space: -pre-wrap;      /* Opera 4-6 */
+ 		white-space: -o-pre-wrap;    /* Opera 7 */
+ 		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+		}
+		
+	a[href]:after, abbr[title]:after {
+		content: "" !important
+		}
+	
+}

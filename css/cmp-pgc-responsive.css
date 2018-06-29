@@ -1,0 +1,122 @@
+@media only screen and (max-width: 991px) {
+    .browserSizeTest {
+        float: none;
+    }
+
+    #addContainer {
+        display: none;
+    }
+}
+
+/*------------------------------------*\
+    #MOBILE - Small view and under (<991px)
+\*------------------------------------*/
+
+@media screen and (max-width: 991px) {
+
+    /* Removes the heading images in mobile view to save real estate */
+    h1[class^="hd"] {
+        background-image: none !important;
+        padding-left: 0px !important;
+    }
+
+    h1:after {
+        clear: both;
+        content: ".";
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .hd-suffix {
+        display: block;
+        float: none;
+        margin-top: 3px;
+    }
+
+    .tgl-panel {
+        margin-top: 5px;
+    }
+
+    .wb-tabs > .tabpanels > details[open] > summary, .wb-tabs > details[open] > summary {
+        font-size: 16px;
+    }
+
+    #cn-data-policy {
+        width: 50%;
+        font-size: 90%;
+    }
+
+    /* Force table to not be like tables anymore */
+    #staffSummary table, #staffSummary thead, #staffSummary tbody, #staffSummary th, #staffSummary td, #staffSummary tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #staffSummary thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #staffSummary tr {
+        border-bottom: 1px dotted #2171B5;
+    }
+
+    #staffSummary td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        padding: 5px !important;
+    }
+
+    #staffSummary tr > td:nth-child(2), #staffSummary tr > td:nth-child(3) {
+        padding-top: 3px !important;
+        padding-bottom: 0 !important;
+        padding-left: 15px !important;
+    }
+
+    #staffSummary tr > td:last-child {
+        padding-bottom: 10px !important;
+    }
+
+    #staffSummary tr > td:first-child {
+        padding-top: 10px !important;
+    }
+
+    #staffSummary td:before {
+        /* Now like a table header */
+        position: initial;
+        /* Top/left values mimic padding */
+        padding-right: 40px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .text-left-sm {
+        text-align: left !important;
+    }
+
+    .hidden-sm {
+        display: none !important
+    }
+
+}
+
+/*------------------------------------*\
+    #MOBILE - Extra small view only (<768px)
+\*------------------------------------*/
+
+@media (max-width: 768px) and (min-width: 0px) {
+
+    .modal-dialog {
+        width: 708px;
+    }
+
+    .text-left-xs {
+        text-align: left !important;
+    }
+
+}
+

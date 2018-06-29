@@ -1,0 +1,39 @@
+/* .my-tooltip */
+.my-tooltip {	
+	border: 1px solid #7B9EB5;
+	border-radius:2px;
+	background-color: #EFF7FF;
+	font-size: 100%;
+	-moz-box-shadow: 3px 3px 5px #cccccc;
+	-webkit-box-shadow: 3px 3px 5px #cccccc;
+	box-shadow: 3px 3px 5px #cccccc;	
+}
+
+.my-tooltip .tooltipster-content {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	line-height:1.5em;
+	padding: 10px 10px 10px 10px;
+	overflow: hidden;
+}
+
+.my-tooltip ul{
+	margin:0;
+	margin-left:15px;
+	padding:0;
+/*	list-style:none;*/
+}
+
+/*.info-icon{
+	width:16px;
+	position:absolute;
+	margin:-16px;
+	padding:0;
+}*/
+
+.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+	border-left: 9px solid transparent !important;
+	border-right: 9px solid transparent !important;
+	border-bottom: 8px solid;
+	top: -7px;
+}

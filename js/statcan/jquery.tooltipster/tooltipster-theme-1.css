@@ -1,0 +1,33 @@
+.tooltipster-theme-1 {
+	margin-top:-4px;
+	border-radius:4px;
+	background-color: #fff;
+	font-size: 100%;
+	border: 1px solid #66afe9;
+	-moz-box-shadow: 0 0 8px rgba(102,175,233,.6);
+	-webkit-box-shadow: 0 0 8px rgba(102,175,233,.6);
+	box-shadow: 0 0 8px rgba(102,175,233,.6);
+}
+
+.tooltipster-theme-1 .tooltipster-content {
+	line-height: 1.4375;
+	padding: 10px 15px 10px 15px;
+	overflow: hidden;
+}
+
+.tooltipster-theme-1 ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.tooltipster-arrow-bottom{
+	
+}
+
+.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+	border-left: 9px solid transparent !important;
+	border-right: 9px solid transparent !important;
+	border-bottom: 8px solid;
+	top: -7px;
+}
