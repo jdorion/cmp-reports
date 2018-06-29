@@ -1,5 +1,6 @@
 .cache
+.vscode
 dist
 yarn-error.log
 build
-node_modules 
+node_modules
